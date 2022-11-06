@@ -8,3 +8,8 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     return "<h1>Hello, world!</h1>"
+
+@app.route("/products")
+def products():
+    product_list = ["Eggs", "Cheese", "Bread", "Butter"]
+    bullet_list = "%s".join(product_list)
